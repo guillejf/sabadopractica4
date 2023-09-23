@@ -125,6 +125,7 @@ app.use("/error", errorRouter);
 
 app.get("*", (req, res, next) => {
   try {
+    console.log("estaba haiendo algo");
     CustomError.createError({
       name: "Page Not Found",
       cause: "Non existent path",
